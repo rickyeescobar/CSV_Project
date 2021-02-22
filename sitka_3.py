@@ -56,6 +56,13 @@ plt.plot(dates, lows, c="blue")
 
 fig.autofmt_xdate()
 
+#we pass fill_between() the list dates for the x values and the low y-value series 
+#and lows. the facecolor argument determines the color of the shadd region; we give it a 
+#low alpha value of 0.1 so the filled region connnects the two data series without distracting from the
+#info that they represent
+
+plt.fill_between(dates,highs,lows, facecolor='blue', alpha=0.1)
+
 plt.title("Daily high and low temperatures - 2018", fontsize=16)
 plt.xlabel("", fontsize=12)
 plt.ylabel("Temperature (F)", fontsize=12)
