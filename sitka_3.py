@@ -71,3 +71,13 @@ plt.tick_params(axis="both",labelsize=12)
 
 plt.show()
 
+#matplotlib's pyplot API has a convenience function called subplots() which acts as a 
+#utility wriapper and helps in createing common layouts of subplots, including the 
+#enclising figure object, in a single call.
+
+fig2, a = plt.subplots(2)
+
+a[0].plot(dates, highs, c='red')
+a[1].plot(dates, lows, c='blue')
+
+plt.show()
