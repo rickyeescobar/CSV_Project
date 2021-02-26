@@ -65,6 +65,7 @@ for row in csv_file1:
 
 fig, a = plt.subplots(2)
 
+fig.suptitle("Temperature comparison between SITKA AIRPORT, AK US and DEATH VALLEY, CA US", fontsize=10)
 
 # figure 1
 
@@ -75,10 +76,13 @@ a[0].plot(dates, lows, c="blue")
 #a[0].autofmt_xdate
 a[0].fill_between(dates,highs,lows, facecolor='blue', alpha=0.1)
 
-a[0].set_title(station[1], fontsize=16)
-#a[0].xlabel("", fontsize=12)
+a[0].set_title(station[1], fontsize=10)
+#a[0].xlabel('', fontsize=12)
 #a[0].ylabel("Temperature (F)", fontsize=12)
 #a[0].tick_params(axis="both",labelsize=12)
+
+for ax in a.flat:
+    ax.label_outer()
 
 # figure 2
 
@@ -88,7 +92,7 @@ a[1].plot(dates1, lows1, c="blue")
 #a[1].autofmt_xdate
 a[1].fill_between(dates1,highs1,lows1, facecolor='blue', alpha=0.1)
 
-a[1].set_title(station1[1], fontsize=16)
+a[1].set_title(station1[1], fontsize=10)
 #a[1].xlabel("", fontsize=12)
 #a[1].ylabel("Temperature (F)", fontsize=12)
 #a[1].tick_params(axis="both",labelsize=12)
