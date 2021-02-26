@@ -12,7 +12,7 @@ csv_file = csv.reader(open_file, delimiter= ',')
 
 header_row = next(csv_file)
 
-
+print('Sitka')
 for index, column_header in enumerate(header_row):
     print("Index:", index, "Column Name:",column_header)
 
@@ -38,6 +38,7 @@ csv_file1 = csv.reader(open_file1, delimiter= ',')
 header_row1 = next(csv_file1)
 
 
+print('Death Valley')
 for index1, column_header1 in enumerate(header_row1):
     print("Index:", index1, "Column Name:",column_header1)
 
@@ -73,13 +74,9 @@ a[0].plot(dates, highs, c="red")
 a[0].plot(dates, lows, c="blue")
 
 
-#a[0].autofmt_xdate
 a[0].fill_between(dates,highs,lows, facecolor='blue', alpha=0.1)
 
 a[0].set_title(station[1], fontsize=10)
-#a[0].xlabel('', fontsize=12)
-#a[0].ylabel("Temperature (F)", fontsize=12)
-#a[0].tick_params(axis="both",labelsize=12)
 
 for ax in a.flat:
     ax.label_outer()
@@ -89,12 +86,9 @@ for ax in a.flat:
 a[1].plot(dates1, highs1, c="red",)
 a[1].plot(dates1, lows1, c="blue")
 
-#a[1].autofmt_xdate
 a[1].fill_between(dates1,highs1,lows1, facecolor='blue', alpha=0.1)
 
 a[1].set_title(station1[1], fontsize=10)
-#a[1].xlabel("", fontsize=12)
-#a[1].ylabel("Temperature (F)", fontsize=12)
-#a[1].tick_params(axis="both",labelsize=12)
+
 
 plt.show()
